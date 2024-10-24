@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Data Entry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Information Form</h1>
+    <form id="userForm">
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" required>
+        <br> <br>
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" required>
+        <br> <br>
+        <label for="jobTitle">Job title:</label>
+        <input type="text" id="jobTitle" required>
+        <br> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="message" id="message"></div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const jobTitle = document.getElementById('jobTitle').value;
+
+            localStorage.setItem('firstName', firstName);
+            localStorage.setItem('lastName', lastName);
+
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = `Hello, ${firstName} ${lastName}, ${jobTitle}!`;
+
+
+            document.getElementById('firstName').value = '';
+            document.getElementById('lastName').value = '';
+            document.getElementById('jobTitle').value = '';
+        });
+    </script>
+</body>
+</html>

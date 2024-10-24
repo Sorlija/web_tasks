@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Skills</title>
+    <style>
+        #skillsSection {
+            width: 400px;
+            height: 220px;
+            border: 2px solid black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            overflow: auto;
+        }
+        .draggable {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            cursor: move;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <h2>Drag and Drop Skills</h2>
+    <div id="skillsSection" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p>Drop your skills here</p>
+    </div>
+    
+    <p id="skill1" class="draggable" draggable="true" ondragstart="drag(event)">HTML</p>
+    <p id="skill2" class="draggable" draggable="true" ondragstart="drag(event)">CSS</p>
+    <p id="skill3" class="draggable" draggable="true" ondragstart="drag(event)">JavaScript</p>
+</body>
+</html>
