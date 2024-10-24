@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Creator Tool Feedback Form</title>
+    <style>
+         h2 {
+        color: green;
+        text-align: center;
+    }
+        body {
+            font-family: 'Times New Roman', Times, serif ;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 500px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        .radio-option{
+            display: flex;
+            align-items: right;
+         }
+
+         input[type="radio"]{
+            margin-right: 5px;
+            width:auto;
+         }
+    </style>
+</head>
+<body>
+
+    <h2>CV Creator Tool Feedback Form</h2>
+    <form method="POST" action="/submit-feedback">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+        <label for="source">How did you hear about the CV Creator Tool?</label>
+        <select id="source" name="source">
+            <option value="Facebook">Facebook</option>
+            <option value="LinkedIn" selected>LinkedIn</option>
+            <option value="Instagram">Instagram</option>
+            <option value="TikTok">TikTok</option>
+            <option value="Others">Others</option>
+        </select>
+    
+        <label>
+            <input type="checkbox" name="newsletter"> Sign up for the newsletter
+        </label>
+
+        <label>Would you want to use this CV Creator Tool again?</label>
+        <div class = "radio-option">
+            <label>
+                <input type="radio" name="reuse" value="Yes" checked> Yes
+            </label> <br> 
+        </div>
+        <div class = "radio-option">
+            <label>
+                <input type="radio" name="reuse" value="No"> No
+            </label> </div>
+            <div class = "radio-option"><label>
+                <input type="radio" name="reuse" value="Maybe"> Maybe
+            </label></div>
+        <input type="submit" value="Submit Feedback">
+    </form>
+</body>
+</html>
