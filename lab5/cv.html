@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            background-color: #fafafa;
+            height: 100vh; 
+            display: flex; 
+        }
+
+        .container {
+            display: flex;
+            width: 100%; 
+            height: 100%; 
+        }
+
+        .sidebar {
+            background-color: #2f00ff;
+            color: rgb(255, 255, 255);
+            width: 300px; 
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(245, 165, 165, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+        }
+
+        .sidebar img {
+            width: 200px;
+            height: 200px; 
+            border-radius: 50%; 
+            margin-bottom: 20px;
+            align-self: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; 
+        }
+
+        hr {
+            border: 1px solid #2f00ff;
+            margin: 10px 0; 
+        }
+
+        h1 {
+            color: #2f00ff; 
+            margin: 0;
+        }
+
+        h3 {
+            color: #2f00ff; 
+            margin: 0;
+        }
+
+        .black {
+            color: black; 
+        }
+
+        .student {
+            color: #2f00ff; 
+            font-size: 0.8em; 
+            margin-top: 5px; 
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            text-align: left; 
+        }
+
+        .content p, .content h3 {
+            text-align: left; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="slika.jpg" alt="Ajla Šorlija">
+            <h3 class="black">CONTACT</h3>
+            <hr>
+            <p>Email: <a href="mailto:ajlasorlija2005@gmail.com" style="color: white; text-decoration: underline;">ajlasorlija2005@gmail.com</a></p>
+            <p>Location: Sarajevo</p>
+            <hr> 
+            <h3 class="black">EDUCATION</h3>
+            <hr>
+            <ol>
+                <li>Osnovna škola Alija Nametak</li>
+                <li>Prva gimnazija Sarajevo</li>
+                <li>Burch University</li>
+            </ol>
+            <hr> 
+            <h3 class="black">SKILLS</h3>
+            <hr>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C++</li>
+                <li>PHP</li>
+                <li>Visual Studio Code</li>
+            </ul>
+            <hr> 
+        </div>
+        <div class="content">
+            <h1>Ajla Šorlija</h1>
+            <p class="student">Student</p> 
+            <hr>
+            <h3>INTRODUCTION</h3>
+            <hr>
+            <p>Hello, my name is <b>Ajla Šorlija</b>, and I am currently a student at <b>Burch University in Sarajevo</b>.</p>
+            <hr>
+            <h3>EXPERIENCE</h3>
+            <hr>
+            <p>Working in various retail chains, volunteering, projects during schooling.</p>
+            <hr>
+            <h3>PERSONAL PROJECTS</h3>
+            <hr>
+            <p>Projects during schooling.</p>
+            <hr>
+            <h3>PERSONAL INFORMATIONS</h3>
+            <hr>
+            <p>Full name: Ajla Šorlija</p>
+        </div>
+    </div>
+</body>
+</html>
